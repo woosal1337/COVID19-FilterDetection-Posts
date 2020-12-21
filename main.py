@@ -14,7 +14,6 @@ for i in os.listdir(imagePath):
     # Checking every image existing the given path with the Teseract and extracting the text
     img = cv2.imread(f"{imagePath}/{i}")
     imgData = pytesseract.image_to_string(img).split()
-    print(imgData)
 
     # Checking if the texts extracted from the given images are included in the keywords or not
     for j in imgData:
